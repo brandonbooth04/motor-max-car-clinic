@@ -217,23 +217,41 @@
 
   <!-- QUOTE -->
   <section id="quote">
-    <div class="quote-inner">
-      <div class="quote-left reveal">
-        <div class="section-label">Free Estimate</div>
-        <h2 class="section-title">Request a <span class="accent">Quote</span></h2>
-        <p class="quote-intro">Tell us about your vehicle and we'll get back to you within one business day with a free, no-obligation estimate.</p>
-        <ul class="quote-perks">
-          <li><span class="list-check">✓</span> No call-out fee</li>
-          <li><span class="list-check">✓</span> All makes &amp; models</li>
-          <li><span class="list-check">✓</span> Transparent pricing</li>
-          <li><span class="list-check">✓</span> MIWA 5-Star Graded</li>
-        </ul>
-        <div class="cert-badges">
-          <img src="rmi.png" alt="RMI" />
-          <img src="certificate-miwa.png" alt="MIWA 5-Star" />
+    <div class="inner">
+
+      <div class="quote-header reveal">
+        <div>
+          <div class="section-label">Free Estimate</div>
+          <h2 class="section-title">Request a <span class="accent">Quote</span></h2>
+        </div>
+        <p class="quote-subtext">Tell us about your vehicle and we'll get back to you<br>within one business day — free, no obligation.</p>
+      </div>
+
+      <div class="quote-contact-strip reveal">
+        <a href="tel:0415851116" class="qcs-item">
+          <svg class="qcs-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div>
+            <div class="qcs-label">Call Us</div>
+            <div class="qcs-value">041 585 1116</div>
+          </div>
+        </a>
+        <a href="mailto:info@motormaxcc.co.za" class="qcs-item">
+          <svg class="qcs-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          <div>
+            <div class="qcs-label">Email</div>
+            <div class="qcs-value">info@motormaxcc.co.za</div>
+          </div>
+        </a>
+        <div class="qcs-item">
+          <svg class="qcs-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div>
+            <div class="qcs-label">Hours</div>
+            <div class="qcs-value">Mon–Fri · 08:00–17:00</div>
+          </div>
         </div>
       </div>
-      <div class="quote-right reveal">
+
+      <div class="quote-form-card reveal">
         <form class="contact-form" id="quoteForm" onsubmit="handleSubmit(event)">
           <div class="form-row">
             <div class="form-group">
@@ -263,7 +281,7 @@
             <div class="form-group">
               <label class="form-label" for="service">Service Required</label>
               <select class="form-select" id="service" name="service">
-                <option value="">— Select —</option>
+                <option value="">— Select service —</option>
                 <option>Automotive Repairs</option>
                 <option>Diagnostics</option>
                 <option>Service &amp; Suspension</option>
@@ -286,10 +304,13 @@
             <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about the issue or work needed…"></textarea>
           </div>
           <div id="formMsg" style="display:none;font-family:var(--font-cond);font-size:0.9rem;letter-spacing:0.08em;"></div>
-          <button type="submit" class="btn-primary form-submit">Send Request →</button>
-          <p class="form-note">// We respond within one business day</p>
+          <div class="form-footer">
+            <button type="submit" class="btn-primary">Send Request →</button>
+            <p class="form-note">// We respond within one business day</p>
+          </div>
         </form>
       </div>
+
     </div>
   </section>
 

@@ -4,404 +4,395 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Motor Max Car Clinic | Port Elizabeth</title>
-  <meta name="description" content="Motor Max Car Clinic – MIWA 5-Star Graded & RMI Registered workshop in Port Elizabeth. Expert repairs, diagnostics, services and more." />
+  <meta name="description" content="Motor Max Car Clinic – MIWA 5-Star Graded & RMI Registered workshop in Port Elizabeth. Expert repairs, diagnostics, and all automotive services." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAV -->
   <header id="site-header">
-    <div class="container nav-inner">
-      <a href="#home" class="logo-link">
-        <img src="logo.jpg" alt="Motor Max Car Clinic" class="nav-logo" />
-      </a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <a href="#home" class="nav-logo-link">
+      <img src="logo.jpg" alt="Motor Max Car Clinic" class="nav-logo" />
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="#quote">Get a Quote</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
-      <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="tel:0415851116" class="nav-cta">Call Us Now</a>
-      </nav>
-    </div>
+    </nav>
   </header>
 
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about"    onclick="closeMobileNav()">About</a>
+    <a href="#services" onclick="closeMobileNav()">Services</a>
+    <a href="#reviews"  onclick="closeMobileNav()">Reviews</a>
+    <a href="#contact"  onclick="closeMobileNav()">Contact</a>
+    <a href="#quote"    onclick="closeMobileNav()" class="mobile-cta">Get a Quote</a>
+  </div>
+
   <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <p class="hero-tag">MIWA 5-Star Graded Workshop &bull; RMI Registered</p>
-      <h1>Your Trusted<br /><span>Automotive Experts</span></h1>
-      <p class="hero-sub">Quality workmanship on all makes and models in Port Elizabeth (Gqeberha)</p>
-      <div class="hero-btns">
-        <a href="#contact" class="btn btn-primary">Get Directions</a>
-        <a href="#services" class="btn btn-outline">Our Services</a>
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">11 Rink Street, Port Elizabeth &nbsp;·&nbsp; MIWA 5-Star &nbsp;·&nbsp; RMI Registered</div>
+      <h1 class="hero-title">
+        MOTOR MAX<br>
+        <span class="accent">CAR</span><span class="sub"> CLINIC</span>
+      </h1>
+      <p class="hero-tagline">Your Vehicle &nbsp;<em>|</em>&nbsp; Our Expertise</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#quote">Get a Free Quote</a>
+        <a class="btn-ghost" href="#services">Our Services</a>
+      </div>
+    </div>
+    <div class="hero-badges">
+      <div class="badge"><span class="badge-dot"></span>MIWA 5-Star Graded</div>
+      <div class="badge-sep"></div>
+      <div class="badge"><span class="badge-dot"></span>RMI Registered</div>
+      <div class="badge-sep"></div>
+      <div class="badge"><span class="badge-dot"></span>All Makes &amp; Models</div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-text reveal">
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title">Trusted <span class="accent">Automotive</span> Experts</h2>
+        <p>Motor Max Car Clinic is a <strong>MIWA 5-Star Graded Workshop</strong> — one of the highest industry recognitions for quality, safety, and professionalism in South Africa. We are also officially <strong>RMI Registered</strong>, giving our clients the assurance that every repair meets strict industry standards.</p>
+        <p>Our skilled technicians bring years of hands-on experience across all makes and models. From your first visit, you'll see why our loyal clients keep coming back.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-num">5<span class="accent">★</span></div>
+            <div class="stat-label">MIWA Graded</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num"><span class="accent">RMI</span></div>
+            <div class="stat-label">Registered</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">All<span class="accent">+</span></div>
+            <div class="stat-label">Makes &amp; Models</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-cert reveal">
+        <img src="certificate-miwa.png" alt="MIWA 5-Star Graded Workshop Certificate" />
+        <div class="rmi-strip">
+          <img src="rmi.png" alt="RMI Registered" />
+          <span>Officially RMI Registered</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="container trust-inner">
-      <div class="trust-item">
-        <img src="rmi.png" alt="RMI Registered" class="trust-badge" />
-        <span>RMI Registered</span>
-      </div>
-      <div class="trust-divider"></div>
-      <div class="trust-item">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <span>MIWA 5-Star Graded Workshop</span>
-      </div>
-      <div class="trust-divider"></div>
-      <div class="trust-item">
-        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span>Trusted Workmanship</span>
-      </div>
-      <div class="trust-divider"></div>
-      <div class="trust-item">
-        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span>All Makes &amp; Models</span>
-      </div>
-    </div>
-  </div>
-
   <!-- SERVICES -->
-  <section id="services" class="section-services">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">What We Do</span>
-        <h2>Our Services</h2>
-        <p>From routine servicing to complex mechanical repairs – we've got you covered.</p>
+  <section id="services">
+    <div class="inner">
+      <div class="section-header reveal">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Our <span class="accent">Services</span></h2>
+        <p class="section-sub">From routine maintenance to complex repairs — we've got every make and model covered.</p>
       </div>
       <div class="services-grid">
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+        <div class="service-card reveal">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
           </div>
           <h3>Automotive Repairs</h3>
-          <p>All makes and models. Reliable repairs to get you back on the road.</p>
+          <p>Reliable repairs to all makes and models to get you back on the road.</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <div class="service-card reveal">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
           </div>
           <h3>Diagnostics</h3>
           <p>Advanced computer diagnostics to pinpoint faults quickly and accurately.</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        <div class="service-card reveal">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
           </div>
           <h3>Services &amp; Suspensions</h3>
-          <p>Scheduled maintenance and full suspension system inspection and repair.</p>
+          <p>Scheduled servicing and full suspension inspection and repair.</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/><path d="M12 5V3M12 21v-2M5 12H3M21 12h-2"/></svg>
+        <div class="service-card reveal">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/><path d="M12 5V3M12 21v-2M5 12H3M21 12h-2"/></svg>
           </div>
           <h3>Brake Systems</h3>
-          <p>Complete brake servicing – pads, discs, callipers, and brake fluid.</p>
+          <p>Complete brake servicing — pads, discs, callipers, and brake fluid.</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 0v10l6 3"/></svg>
+        <div class="service-card reveal">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>
           </div>
           <h3>Engine &amp; Head Overhauls</h3>
           <p>Full engine rebuilds and cylinder head overhauls by experienced technicians.</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        <div class="service-card reveal">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
           </div>
           <h3>Gearbox &amp; Clutches</h3>
-          <p>Gearbox repairs and clutch replacements across manual and automatic vehicles.</p>
+          <p>Gearbox repairs and clutch replacements — manual and automatic.</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+        <div class="service-card reveal">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
           </div>
           <h3>Timing Chains &amp; Belts</h3>
-          <p>Precision replacement of timing belts and chains to protect your engine.</p>
+          <p>Precision replacement to protect your engine from costly damage.</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div class="service-card reveal">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           </div>
           <h3>ABS, Airbags &amp; Engine Lights</h3>
-          <p>Warning light diagnostics and repair for ABS, airbag, and engine management systems.</p>
+          <p>Warning light diagnostics and repair for ABS, airbag, and engine management.</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
+        <div class="service-card reveal">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
           </div>
           <h3>Auto Electrical</h3>
-          <p>Starter motors, alternators, and full auto electrical fault finding and repair.</p>
+          <p>Starter motors, alternators, and full auto electrical fault finding.</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        <div class="service-card reveal">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
           </div>
           <h3>Turbo Overhauls</h3>
-          <p>Turbocharger diagnostics, overhauls, and repairs for petrol and diesel vehicles.</p>
+          <p>Turbocharger diagnostics, overhauls, and repairs for petrol and diesel.</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <div class="service-card reveal">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
           </div>
           <h3>Car Remote Keys</h3>
-          <p>Remote key programming and replacement for a wide range of vehicle brands.</p>
+          <p>Remote key programming and replacement for a wide range of brands.</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+        <div class="service-card reveal">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
           </div>
           <h3>Aircon Repairs</h3>
-          <p>Air conditioning system diagnosis, regas, and full repairs.</p>
+          <p>Air conditioning diagnosis, regas, and full system repairs.</p>
         </div>
-
-        <div class="service-card service-card--wide">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H2"/><circle cx="6.5" cy="18.5" r="2.5"/><circle cx="16.5" cy="18.5" r="2.5"/></svg>
+        <div class="service-card service-card--wide reveal">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H2"/><circle cx="6.5" cy="18.5" r="2.5"/><circle cx="16.5" cy="18.5" r="2.5"/></svg>
           </div>
           <h3>Mercedes Automatic Gearbox</h3>
-          <p>Specialist repairs for Mercedes-Benz automatic gearbox systems.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT / AWARDS -->
-  <section id="about" class="section-about">
-    <div class="container about-inner">
-      <div class="about-text">
-        <span class="section-tag">About Us</span>
-        <h2>Recognised Excellence in Automotive Care</h2>
-        <p>Motor Max Car Clinic is proud to be a <strong>MIWA 5-Star Graded Workshop</strong> – one of the highest industry recognitions for quality, safety, and professionalism in South Africa.</p>
-        <p>We are also officially <strong>RMI (Retail Motor Industry Organisation) Registered</strong>, giving our clients the assurance that every repair meets strict industry standards.</p>
-        <p>Our team of skilled technicians brings years of hands-on experience to every job, treating each vehicle with the care it deserves. From your first visit, you'll see why our loyal clients keep coming back.</p>
-        <ul class="about-highlights">
-          <li>&#10003; All makes and models accepted</li>
-          <li>&#10003; Certified and experienced technicians</li>
-          <li>&#10003; Quality parts and trusted workmanship</li>
-          <li>&#10003; Transparent pricing and honest advice</li>
-        </ul>
-      </div>
-      <div class="about-cert">
-        <img src="certificate-miwa.png" alt="MIWA 5-Star Graded Workshop Certificate" class="cert-img" />
-        <div class="rmi-row">
-          <img src="rmi.png" alt="RMI Registered" class="rmi-img" />
-          <p>Officially RMI Registered</p>
+          <p>Specialist repairs for Mercedes-Benz automatic transmission systems.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- REVIEWS -->
-  <section id="reviews" class="section-reviews">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">What Clients Say</span>
-        <h2>Google Reviews</h2>
-        <p>Real feedback from our valued customers in Port Elizabeth.</p>
+  <section id="reviews">
+    <div class="inner">
+      <div class="section-header reveal">
+        <div class="section-label">What Clients Say</div>
+        <h2 class="section-title">Google <span class="accent">Reviews</span></h2>
       </div>
       <div class="reviews-grid">
-
-        <div class="review-card">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">"1000% service. Alex is a friendly gentleman, highly skilled and professional. If you're around P.E having a problem with your vehicle, please — I repeat please — see these guys. Alex will fix you while showing love and care."</p>
-          <div class="review-author">
-            <div class="review-avatar">M</div>
-            <div>
-              <strong>Mthobeli Siyeka</strong>
-              <span>a year ago</span>
-            </div>
-          </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p>"1000% service. Alex is a friendly gentleman, highly skilled and professional. If you're around P.E having a problem with your vehicle — please see these guys. Alex will fix you while showing love and care."</p>
+          <div class="review-author"><div class="review-av">M</div><div><strong>Mthobeli Siyeka</strong><span>a year ago</span></div></div>
         </div>
-
-        <div class="review-card">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">"Amazing staff &amp; workmanship, my vehicle is purring like a kitten. Big thank you for going the extra mile. 1 very happy customer."</p>
-          <div class="review-author">
-            <div class="review-avatar">R</div>
-            <div>
-              <strong>Ronny Kenny</strong>
-              <span>Local Guide &bull; a year ago</span>
-            </div>
-          </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p>"Amazing staff &amp; workmanship, my vehicle is purring like a kitten. Big thank you for going the extra mile. 1 very happy customer."</p>
+          <div class="review-author"><div class="review-av">R</div><div><strong>Ronny Kenny</strong><span>Local Guide · a year ago</span></div></div>
         </div>
-
-        <div class="review-card">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">"Called for a last minute oil change for my mom's car. Alex was great and squeezed me in same day and took care of everything in 45 min. Great customer service and just a really honest and nice guy."</p>
-          <div class="review-author">
-            <div class="review-avatar">A</div>
-            <div>
-              <strong>Andrew Singer</strong>
-              <span>3 years ago</span>
-            </div>
-          </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p>"Called for a last minute oil change. Alex was great and squeezed me in same day, taking care of everything in 45 min. Great customer service and a really honest, nice guy."</p>
+          <div class="review-author"><div class="review-av">A</div><div><strong>Andrew Singer</strong><span>3 years ago</span></div></div>
         </div>
-
-        <div class="review-card">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">"Fast and reliable, and the staff handled my car problem professionally. I would highly recommend them, and will be taking my vehicle back for services in the future."</p>
-          <div class="review-author">
-            <div class="review-avatar">J</div>
-            <div>
-              <strong>Jean de Villiers</strong>
-              <span>Local Guide &bull; a year ago</span>
-            </div>
-          </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p>"Fast and reliable, and the staff handled my car problem professionally. I would highly recommend them, and will be taking my vehicle back for services in the future."</p>
+          <div class="review-author"><div class="review-av">J</div><div><strong>Jean de Villiers</strong><span>Local Guide · a year ago</span></div></div>
         </div>
-
-        <div class="review-card">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">"They are efficient, thorough, friendly and considerate. Motor Max Car Clinic came highly recommended, and I will recommend them to other people in a heartbeat. It's not easy finding a mechanic you can trust. They can be trusted."</p>
-          <div class="review-author">
-            <div class="review-avatar">N</div>
-            <div>
-              <strong>Nadia Lello</strong>
-              <span>Local Guide &bull; 3 years ago</span>
-            </div>
-          </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p>"They are efficient, thorough, friendly and considerate. It's not easy finding a mechanic you can trust. They can be trusted."</p>
+          <div class="review-author"><div class="review-av">N</div><div><strong>Nadia Lello</strong><span>Local Guide · 3 years ago</span></div></div>
         </div>
-
-        <div class="review-card">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">"Money doesn't come first here. They are very friendly and give professional service. Alex is a main man. I highly recommend them."</p>
-          <div class="review-author">
-            <div class="review-avatar">J</div>
-            <div>
-              <strong>Jeff Chipeta</strong>
-              <span>Local Guide &bull; 2 years ago</span>
-            </div>
-          </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p>"Money doesn't come first here. They are very friendly and give professional service. Alex is a main man. I highly recommend them."</p>
+          <div class="review-author"><div class="review-av">J</div><div><strong>Jeff Chipeta</strong><span>Local Guide · 2 years ago</span></div></div>
         </div>
-
-        <div class="review-card">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">"Very friendly and professional. I'm happy with Leon's service — he goes an extra mile to help the customer."</p>
-          <div class="review-author">
-            <div class="review-avatar">N</div>
-            <div>
-              <strong>Noyolo Sidjiyo</strong>
-              <span>3 years ago</span>
-            </div>
-          </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p>"Very friendly and professional. I'm happy with Leon's service — he goes an extra mile to help the customer."</p>
+          <div class="review-author"><div class="review-av">N</div><div><strong>Noyolo Sidjiyo</strong><span>3 years ago</span></div></div>
         </div>
-
-        <div class="review-card">
-          <div class="review-stars">&#9733;&#9733;&#9733;</div>
-          <p class="review-text">"Great service. Better pricing. Work done on my car was done well."</p>
-          <div class="review-author">
-            <div class="review-avatar">C</div>
-            <div>
-              <strong>Cobus van Biljon</strong>
-              <span>Local Guide &bull; a year ago</span>
-            </div>
-          </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★</div>
+          <p>"Great service. Better pricing. Work done on my car was done well."</p>
+          <div class="review-author"><div class="review-av">C</div><div><strong>Cobus van Biljon</strong><span>Local Guide · a year ago</span></div></div>
         </div>
-
       </div>
-      <div class="reviews-cta">
-        <a href="https://www.google.com/maps/place/Motor+Max+Car+Clinic/@-33.96389,25.611118,18z" target="_blank" rel="noopener" class="btn btn-outline-dark">Read All Reviews on Google</a>
+      <div class="reviews-more reveal">
+        <a href="https://www.google.com/maps/place/Motor+Max+Car+Clinic/@-33.96389,25.611118,18z" target="_blank" rel="noopener" class="btn-ghost">Read All Reviews on Google</a>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section-contact">
-    <div class="container">
-      <div class="section-header section-header--light">
-        <span class="section-tag">Find Us</span>
-        <h2>Contact &amp; Location</h2>
+  <!-- QUOTE FORM -->
+  <section id="quote">
+    <div class="inner quote-inner">
+      <div class="reveal" style="grid-column:1/-1;margin-bottom:0.5rem;">
+        <div class="section-label">Free Estimate</div>
+        <h2 class="section-title">Request a <span class="accent">Quote</span></h2>
       </div>
-      <div class="contact-inner">
-        <div class="contact-details">
-          <div class="contact-item">
-            <div class="contact-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <h4>Address</h4>
-              <p>11 Rink Street<br />Port Elizabeth (Gqeberha)</p>
-            </div>
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <div class="contact-label">Address</div>
+            <div class="contact-value">11 Rink Street<br>Port Elizabeth (Gqeberha)</div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.35 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.75a16 16 0 0 0 6 6l1.12-1.12a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15v1.92z"/></svg>
-            </div>
-            <div>
-              <h4>Telephone</h4>
-              <a href="tel:0415851116">041 585 1116</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div>
-              <h4>Email</h4>
-              <a href="mailto:info@motormaxcc.co.za">info@motormaxcc.co.za</a>
-            </div>
-          </div>
-          <a href="tel:0415851116" class="btn btn-primary btn-block">Call Us: 041 585 1116</a>
         </div>
-        <div class="contact-map">
-          <iframe
-            title="Motor Max Car Clinic Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.0!2d25.611118!3d-33.963890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7add34855a98d7%3A0x18b8f57bebc4d108!2sMotor%20Max%20Car%20Clinic!5e0!3m2!1sen!2sza!4v1"
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value"><a href="tel:0415851116">041 585 1116</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:info@motormaxcc.co.za">info@motormaxcc.co.za</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">🕐</span>
+          <div>
+            <div class="contact-label">Hours</div>
+            <div class="contact-value">Mon–Fri: 08:00 – 17:00<br>Sat–Sun: Closed</div>
+          </div>
+        </div>
+        <div class="cert-badges">
+          <img src="rmi.png" alt="RMI" />
+          <img src="certificate-miwa.png" alt="MIWA 5-Star" />
         </div>
       </div>
+      <form class="contact-form reveal" id="quoteForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="fname">First Name</label>
+            <input class="form-input" type="text" id="fname" name="first-name" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lname">Last Name</label>
+            <input class="form-input" type="text" id="lname" name="last-name" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="082 000 0000" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="vehicle">Vehicle (Make &amp; Model)</label>
+            <input class="form-input" type="text" id="vehicle" name="vehicle" placeholder="Toyota Corolla 2020" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="service">Service Required</label>
+            <select class="form-select" id="service" name="service">
+              <option value="">— Select —</option>
+              <option>Automotive Repairs</option>
+              <option>Diagnostics</option>
+              <option>Service &amp; Suspension</option>
+              <option>Brake System</option>
+              <option>Engine / Head Overhaul</option>
+              <option>Gearbox &amp; Clutch</option>
+              <option>Timing Chain / Belt</option>
+              <option>ABS / Airbags / Engine Light</option>
+              <option>Auto Electrical</option>
+              <option>Turbo Overhaul</option>
+              <option>Car Remote Key</option>
+              <option>Aircon Repair</option>
+              <option>Mercedes Automatic Gearbox</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Describe the Problem</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about the issue or work needed…"></textarea>
+        </div>
+        <div id="formMsg" style="display:none;font-family:var(--font-cond);font-size:0.9rem;letter-spacing:0.08em;color:var(--red);"></div>
+        <button type="submit" class="btn-primary form-submit">Send Request →</button>
+        <p class="form-note">// We respond within one business day</p>
+      </form>
     </div>
   </section>
+
+  <!-- MAP -->
+  <div id="map">
+    <iframe
+      title="Motor Max Car Clinic Location"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.0!2d25.611118!3d-33.963890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7ad25e3e4d64bf:0x18b380b90de55508!2sMotor%20Max%20Car%20Clinic!5e0!3m2!1sen!2sza!4v1"
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+    </iframe>
+    <div class="map-overlay">
+      <div class="map-overlay-title">Motor Max Car Clinic</div>
+      <div class="map-overlay-addr">11 Rink Street, Port Elizabeth (Gqeberha)</div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-logo">
-        <img src="logo.jpg" alt="Motor Max Car Clinic" />
-        <p>Quality service. Trusted workmanship.<br />Excellence in everything we do.</p>
+  <footer id="contact">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo.jpg" alt="Motor Max Car Clinic" class="footer-logo" />
+        <p class="footer-desc">Quality service. Trusted workmanship. Excellence in everything we do.</p>
+        <div class="footer-badges">
+          <img src="rmi.png" alt="RMI" />
+        </div>
       </div>
-      <div class="footer-links">
-        <h5>Quick Links</h5>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#quote">Get a Quote</a>
       </div>
-      <div class="footer-contact">
-        <h5>Contact</h5>
-        <p>11 Rink Street, Port Elizabeth</p>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <span>11 Rink Street, Port Elizabeth</span>
         <a href="tel:0415851116">041 585 1116</a>
         <a href="mailto:info@motormaxcc.co.za">info@motormaxcc.co.za</a>
       </div>
-      <div class="footer-badges">
-        <img src="rmi.png" alt="RMI Registered" />
-      </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Motor Max Car Clinic. All rights reserved.</p>
+      <span>&copy; 2025 Motor Max Car Clinic. All rights reserved.</span>
     </div>
   </footer>
 

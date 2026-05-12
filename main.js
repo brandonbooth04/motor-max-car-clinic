@@ -1,42 +1,42 @@
-// Sticky header shadow on scroll
+// Sticky header
 const header = document.getElementById('site-header');
 window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 20);
+  header.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// Mobile nav toggle
-const toggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-toggle.addEventListener('click', () => {
-  const open = navLinks.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', open);
+// Hamburger / mobile nav
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('open');
 });
 
-// Close mobile nav on link click
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-  });
-});
+function closeMobileNav() {
+  hamburger.classList.remove('open');
+  mobileNav.classList.remove('open');
+}
 
-// Animate service cards on scroll into view
-const cards = document.querySelectorAll('.service-card');
-const observer = new IntersectionObserver((entries) => {
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }, i * 60);
-      observer.unobserve(entry.target);
+      setTimeout(() => entry.target.classList.add('visible'), i * 60);
+      revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.08 });
+revealEls.forEach(el => revealObserver.observe(el));
 
-cards.forEach(card => {
-  card.style.opacity = '0';
-  card.style.transform = 'translateY(20px)';
-  card.style.transition = 'opacity .4s ease, transform .4s ease, box-shadow .25s ease, border-top-color .25s ease';
-  observer.observe(card);
-});
+// Quote form submission
+function handleSubmit(e) {
+  e.preventDefault();
+  const msg = document.getElementById('formMsg');
+  msg.style.display = 'block';
+  msg.textContent = '// Message sent — we\'ll be in touch within one business day.';
+  msg.style.color = 'var(--red)';
+  e.target.reset();
+  setTimeout(() => { msg.style.display = 'none'; }, 6000);
+}

@@ -227,8 +227,8 @@ nav { display: flex; align-items: center; gap: 2.5rem; }
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
-  margin-bottom: -4vw;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - min(4vw, 48px)), 0 100%);
+  margin-bottom: min(-4vw, -48px);
 }
 
 .hero-bg {
@@ -445,8 +445,8 @@ nav { display: flex; align-items: center; gap: 2.5rem; }
 #services {
   padding: 8vw 0 6vw;
   background: var(--dark);
-  clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
-  margin-top: -3vw;
+  clip-path: polygon(0 min(3vw, 40px), 100% 0, 100% 100%, 0 100%);
+  margin-top: max(-3vw, -40px);
 }
 
 .services-grid {
@@ -525,7 +525,7 @@ nav { display: flex; align-items: center; gap: 2.5rem; }
 #reviews {
   padding: 8vw 0 6vw;
   background: var(--dark2);
-  clip-path: polygon(0 0, 100% 3vw, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% min(3vw, 40px), 100% 100%, 0 100%);
   margin-top: -1px;
 }
 
@@ -589,7 +589,7 @@ nav { display: flex; align-items: center; gap: 2.5rem; }
 #quote {
   padding: 0;
   background: var(--dark);
-  clip-path: polygon(0 0, 100% 3vw, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% min(3vw, 40px), 100% 100%, 0 100%);
   margin-top: -1px;
 }
 .quote-inner {
@@ -610,21 +610,31 @@ nav { display: flex; align-items: center; gap: 2.5rem; }
   background: var(--dark2);
 }
 
-.contact-info { display: flex; flex-direction: column; gap: 1.6rem; }
-.contact-item { display: flex; gap: 1rem; align-items: flex-start; }
-.contact-icon { font-size: 1.1rem; margin-top: 2px; }
-.contact-label {
-  font-family: var(--font-cond);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--red);
-  margin-bottom: 3px;
+.quote-intro {
+  font-size: 0.94rem;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 340px;
 }
-.contact-value { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-.contact-value a { color: var(--light); transition: color 0.2s; }
-.contact-value a:hover { color: var(--red); }
+
+.quote-perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.quote-perks li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-cond);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--light);
+}
 
 .cert-badges {
   display: flex;
@@ -787,8 +797,8 @@ footer {
   .title-outline { font-size: clamp(3.6rem, 15vw, 7rem); }
   .title-filled  { font-size: clamp(3rem, 11vw, 5.5rem); }
   .form-row { grid-template-columns: 1fr; }
-  #home     { clip-path: polygon(0 0, 100% 0, 100% 97%, 0 100%); }
-  #services { clip-path: polygon(0 2vw, 100% 0, 100% 100%, 0 100%); }
+  #home     { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), 0 100%); margin-bottom: -24px; }
+  #services { clip-path: polygon(0 24px, 100% 0, 100% 100%, 0 100%); margin-top: -24px; }
   #reviews  { clip-path: none; }
   #quote    { clip-path: none; }
   .cert-wrap::before { display: none; }

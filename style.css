@@ -227,8 +227,6 @@ nav { display: flex; align-items: center; gap: 2.5rem; }
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - min(4vw, 48px)), 0 100%);
-  margin-bottom: min(-4vw, -48px);
 }
 
 .hero-bg {
@@ -445,8 +443,6 @@ nav { display: flex; align-items: center; gap: 2.5rem; }
 #services {
   padding: 8vw 0 6vw;
   background: var(--dark);
-  clip-path: polygon(0 min(3vw, 40px), 100% 0, 100% 100%, 0 100%);
-  margin-top: max(-3vw, -40px);
 }
 
 .services-grid {
@@ -525,8 +521,6 @@ nav { display: flex; align-items: center; gap: 2.5rem; }
 #reviews {
   padding: 8vw 0 6vw;
   background: var(--dark2);
-  clip-path: polygon(0 0, 100% min(3vw, 40px), 100% 100%, 0 100%);
-  margin-top: -1px;
 }
 
 .reviews-grid {
@@ -589,8 +583,6 @@ nav { display: flex; align-items: center; gap: 2.5rem; }
 #quote {
   padding: 0;
   background: var(--dark);
-  clip-path: polygon(0 0, 100% min(3vw, 40px), 100% 100%, 0 100%);
-  margin-top: -1px;
 }
 .quote-inner {
   display: grid;
@@ -797,10 +789,6 @@ footer {
   .title-outline { font-size: clamp(3.6rem, 15vw, 7rem); }
   .title-filled  { font-size: clamp(3rem, 11vw, 5.5rem); }
   .form-row { grid-template-columns: 1fr; }
-  #home     { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), 0 100%); margin-bottom: -24px; }
-  #services { clip-path: polygon(0 24px, 100% 0, 100% 100%, 0 100%); margin-top: -24px; }
-  #reviews  { clip-path: none; }
-  #quote    { clip-path: none; }
   .cert-wrap::before { display: none; }
   .map-overlay { left: 1rem; right: 1rem; bottom: 1rem; }
   .hero-content { padding-top: 110px; }

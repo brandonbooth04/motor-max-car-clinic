@@ -770,30 +770,42 @@ footer {
 
 /* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 960px) {
-  .about-inner { grid-template-columns: 1fr; }
+  .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .quote-inner { grid-template-columns: 1fr; }
-  .quote-left { padding: 3rem 5vw 2rem; }
-  .quote-right { padding: 2rem 5vw 3rem; }
+  .quote-left  { padding: 3.5rem 5vw 2.5rem; border-right: none; border-bottom: 1px solid var(--mid); }
+  .quote-right { padding: 2.5rem 5vw 3.5rem; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .hero-credentials { flex-wrap: wrap; }
-  .cred-item { flex: 0 0 50%; }
+  .cred-item { flex: 0 0 33.333%; }
   .cred-divider { display: none; }
+  .cert-badges { flex-wrap: wrap; }
 }
 
 @media (max-width: 768px) {
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
-  .title-outline { font-size: clamp(4rem, 16vw, 7rem); }
-  .title-filled  { font-size: clamp(3.2rem, 12vw, 5.5rem); }
+  .title-outline { font-size: clamp(3.6rem, 15vw, 7rem); }
+  .title-filled  { font-size: clamp(3rem, 11vw, 5.5rem); }
   .form-row { grid-template-columns: 1fr; }
-  #home { clip-path: polygon(0 0, 100% 0, 100% 97%, 0 100%); }
+  #home     { clip-path: polygon(0 0, 100% 0, 100% 97%, 0 100%); }
   #services { clip-path: polygon(0 2vw, 100% 0, 100% 100%, 0 100%); }
   #reviews  { clip-path: none; }
   #quote    { clip-path: none; }
+  .cert-wrap::before { display: none; }
+  .map-overlay { left: 1rem; right: 1rem; bottom: 1rem; }
+  .hero-content { padding-top: 110px; }
+  .about-visual { order: -1; }
+  .cert-img { max-width: 100%; }
 }
 
 @media (max-width: 520px) {
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .footer-inner { grid-template-columns: 1fr; }
-  .cred-item { flex: 0 0 100%; }
+  .cred-item { flex: 0 0 100%; border-bottom: 1px solid var(--mid); }
+  .cred-item:last-child { border-bottom: none; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .rmi-strip { clip-path: none; }
+  .cert-badges img:last-child { height: 56px; }
+  .section-title { font-size: clamp(2rem, 9vw, 3rem); }
 }
